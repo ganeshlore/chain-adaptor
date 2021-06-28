@@ -1,0 +1,30 @@
+{
+  "name": "chain-adaptor",
+  "version": "1.0.5",
+  "description": "Chain Sense Adaptor",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ganeshlore/chain-adaptor.git"
+  },
+  "author": "Ganesh Lore",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ganeshlore/chain-adaptor/issues"
+  },
+  "homepage": "https://github.com/ganeshlore/chain-adaptor#readme",
+  "keywords": [],
+  "devDependencies": {
+    "@types/web3": "^1.2.2",
+    "mocha": "^9.0.1",
+    "typescript": "^4.3.4"
+  },
+  "dependencies": {
+    "web3": "^1.3.6"
+  }
+}
