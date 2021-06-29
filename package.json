@@ -1,6 +1,6 @@
 {
   "name": "chain-adaptor",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Chain Sense Adaptor",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -29,6 +29,7 @@
   "dependencies": {
     "@types/web3": "^1.2.2",
     "assert": "^2.0.0",
+    "chai": "^4.3.4",
     "crypto-js": "^4.0.0",
     "http": "^0.0.1-security",
     "https": "^1.0.0",
