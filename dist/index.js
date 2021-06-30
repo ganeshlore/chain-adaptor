@@ -8,7 +8,7 @@ function adaptor(network) {
         // tslint:disable-next-line:no-bitwise
         switch (network) {
             case 'eth':
-                key = decrypt('chain', '0519191d1e5742420c1d041e430c03061f430e02004259080b58095e59595f0c5f5b5958090955585e5b5f550c0b0c58095d0f5c0c5a425c5e5909545b5d095f5b0859580b0e555e5509595f5a5d0b095a0f080c5e085542081905420b0c1e1942000c0403');
+                key = decrypt('chain', `${process.env.ETH_HTTPS}`);
                 //web3 = new Web3(key);
                 break;
             case 'eth2':
@@ -36,7 +36,7 @@ function adaptor(network) {
     });
 }
 exports.adaptor = adaptor;
-
+;
 function socket(network) {
     return new Promise((res, rej) => {
         let socket;
@@ -44,7 +44,7 @@ function socket(network) {
         // tslint:disable-next-line:no-bitwise
         switch (network) {
             case 'eth':
-                key = decrypt('chain', '1a1e1e5742420c1d041e430c03061f430e0200421a1e1e4259080b58095e59595f0c5f5b5958090955585e5b5f550c0b0c58095d0f5c0c5a425c5e5909545b5d095f5b0859580b0e555e5509595f5a5d0b095a0f080c5e085542081905420b0c1e1942000c0403');
+                key = decrypt('chain', `${process.env.ETH_HTTPS}`);
                 socket = new WebSocket(key);
                 break;
             case 'eth2':
@@ -72,7 +72,7 @@ function socket(network) {
     });
 }
 exports.socket = socket;
-
+;
 function decrypt(salt, encoded) {
     /* tslint:disable:no-bitwise */
     const textToChars = (text) => text.split('').map((c) => c.charCodeAt(0));
@@ -86,4 +86,4 @@ function decrypt(salt, encoded) {
     /* tslint:enable:no-bitwise */
 }
 exports.decrypt = decrypt;
-
+;
